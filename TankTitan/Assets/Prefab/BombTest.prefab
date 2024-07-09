@@ -136,7 +136,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   explosionRadius: 5
-  delayBeforeExplosion: 2
+  delayBeforeExplosion: 2.5
   destructibleLayer:
     serializedVersion: 2
     m_Bits: 64

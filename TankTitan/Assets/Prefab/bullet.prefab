@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7704409637192947099}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -2.5121479e-15, y: 0.977133, z: 2.5121479e-15, w: 0.2126292}
   m_LocalPosition: {x: 1.032, y: 2.471, z: 4.041}
   m_LocalScale: {x: 0.34593, y: 0.34593, z: 0.34593}
   m_ConstrainProportionsScale: 0
@@ -150,3 +150,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletData: {fileID: 11400000, guid: de6e154dd99afab448667e8ea52dada9, type: 2}
   bounce: 0
+  destructibleLayer:
+    serializedVersion: 2
+    m_Bits: 0
