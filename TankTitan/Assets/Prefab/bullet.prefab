@@ -29,13 +29,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7704409637192947099}
   serializedVersion: 2
-  m_LocalRotation: {x: -2.5121479e-15, y: 0.977133, z: 2.5121479e-15, w: 0.2126292}
+  m_LocalRotation: {x: 6.8670686e-10, y: -0.28091222, z: -0.000000007849044, w: 0.95973355}
   m_LocalPosition: {x: 1.032, y: 2.471, z: 4.041}
   m_LocalScale: {x: 0.34593, y: 0.34593, z: 0.34593}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &9132823890962123569
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -119,7 +119,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -133,9 +133,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &-2089463540825239962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,4 +152,5 @@ MonoBehaviour:
   bounce: 0
   destructibleLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 192
+  rb: {fileID: 3157857894541348454}
