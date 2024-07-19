@@ -697,6 +697,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1079867852}
     - target: {fileID: 5297622755642181111, guid: bc3842f9673c22e4e930db2d90a13815, type: 3}
+      propertyPath: stoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5297622755642181111, guid: bc3842f9673c22e4e930db2d90a13815, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 512
       objectReference: {fileID: 0}
@@ -715,6 +719,10 @@ PrefabInstance:
     - target: {fileID: 6301090906345027787, guid: bc3842f9673c22e4e930db2d90a13815, type: 3}
       propertyPath: m_Speed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301090906345027787, guid: bc3842f9673c22e4e930db2d90a13815, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7649886264946573631, guid: bc3842f9673c22e4e930db2d90a13815, type: 3}
       propertyPath: m_LocalPosition.x
