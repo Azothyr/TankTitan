@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170aad651d38d4a45bce12e7bffaea52, type: 3}
   m_Name: RegBullet
   m_EditorClassIdentifier: 
-  shellPrefab: {fileID: 7704409637192947099, guid: f06c7dc240994b041bb1cf1e04530a2a, type: 3}
+  shellPrefab: {fileID: 1679951891777092995, guid: 17b6478d37a5cb24380a93ae1426b8a2, type: 3}
   speed: 15
-  maxBounces: 2
+  maxBounces: 1
   damage: 10
   timeBetweenShots: 0.15

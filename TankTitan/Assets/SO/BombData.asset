@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170aad651d38d4a45bce12e7bffaea52, type: 3}
   m_Name: BombData
   m_EditorClassIdentifier: 
-  shellPrefab: {fileID: 4905270650836680006, guid: e9248a8d190545043ba3bee89630fd85, type: 3}
+  shellPrefab: {fileID: 8991306457807591594, guid: 0e74c2097c19b90459df41af2a6d8993, type: 3}
   speed: 0
   maxBounces: 0
   damage: 10

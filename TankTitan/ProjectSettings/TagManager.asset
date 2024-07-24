@@ -15,8 +15,8 @@ TagManager:
   - Bullet
   - Player
   - Ground
-  - 
-  - 
+  - Destructible
+  - Wall
   - 
   - 
   - 
