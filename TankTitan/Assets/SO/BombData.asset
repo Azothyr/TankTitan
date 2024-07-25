@@ -16,4 +16,4 @@ MonoBehaviour:
   speed: 0
   maxBounces: 0
   damage: 10
-  timeBetweenShots: 1
+  timeBetweenShots: 2
