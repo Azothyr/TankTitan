@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 6081547327762606456}
   - component: {fileID: 669852994311079934}
   - component: {fileID: 3045048762013621358}
+  - component: {fileID: -5922463929813145247}
   m_Layer: 6
   m_Name: ClassicTankWhite
   m_TagString: Untagged
@@ -441,6 +442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 669852994311079934}
+  gameManager: {fileID: 0}
   player: {fileID: 0}
   bB: {fileID: 4904528898750564658, guid: 17b6478d37a5cb24380a93ae1426b8a2, type: 3}
   bombData: {fileID: 11400000, guid: a5032b378e3d48a458f3c957c3d13be7, type: 2}
@@ -462,6 +464,51 @@ MonoBehaviour:
     m_Bits: 256
   sightRange: 50
   attackRange: 50
+--- !u!114 &-5922463929813145247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4424943457500570814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4641b6c1010b92543881085bcf5b3ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4424943457500570814}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3045048762013621358}
+        m_TargetAssemblyTypeName: EnemyTank, Assembly-CSharp
+        m_MethodName: ManagerHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  playerCollisionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  player:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &4950202680189563989
 GameObject:
   m_ObjectHideFlags: 0
