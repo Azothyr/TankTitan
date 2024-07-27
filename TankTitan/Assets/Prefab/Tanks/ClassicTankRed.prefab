@@ -464,7 +464,7 @@ MonoBehaviour:
   bombTriggered: 0
   pathUpdateDelay: 0.2
   walkPointRange: 10
-  attackSpeed: 2
+  attackSpeed: 3
   rotateSpeed: 10
   timeBetweenAttacks: 2
   fireTransform: {fileID: 2010001061431887885}
@@ -479,6 +479,7 @@ MonoBehaviour:
     m_Bits: 256
   sightRange: 50
   attackRange: 50
+  startingPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &2455007658893023073
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: daafc6ab1ca6ca34e9e11c2670467e9f, type: 2}
+  - {fileID: 2100000, guid: 6c0483a20ab93624c9debb6b9a97af49, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -495,6 +495,7 @@ MonoBehaviour:
     m_Bits: 256
   sightRange: 50
   attackRange: 50
+  startingPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &7981471582061044369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -768,7 +769,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: be9e8e29bfa20a748882acf0fa29023d, type: 2}
-  - {fileID: 2100000, guid: daafc6ab1ca6ca34e9e11c2670467e9f, type: 2}
+  - {fileID: 2100000, guid: 6c0483a20ab93624c9debb6b9a97af49, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

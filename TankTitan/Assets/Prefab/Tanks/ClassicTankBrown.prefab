@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 3748866152703092338}
   - component: {fileID: 9094392480809094155}
   m_Layer: 6
-  m_Name: ClassicTankTan
+  m_Name: ClassicTankBrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -817,7 +817,7 @@ MonoBehaviour:
   fireTransform: {fileID: 6741945192489287718}
   bombTransform: {fileID: 1799776414868522128}
   barrelPrefab: {fileID: 7279981528663160518}
-  stationary: 0
+  stationary: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -826,6 +826,7 @@ MonoBehaviour:
     m_Bits: 256
   sightRange: 50
   attackRange: 50
+  startingPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &9094392480809094155
 MonoBehaviour:
   m_ObjectHideFlags: 0
