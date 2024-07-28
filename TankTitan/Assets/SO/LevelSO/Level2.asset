@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: Level2
   m_EditorClassIdentifier: 
   levelNumber: 2
-  LevelPrefab: {fileID: 6646181594332196610, guid: 3b97d24e01fd649429381c06f03926fc, type: 3}
-  TankPrefabs:
-  - {fileID: 7226978680875959476, guid: 330d0681542d88643ab1a8ba37837c3c, type: 3}
-  TankSpawnPoints:
-  - {x: 35.4, y: -0.00000023841858, z: 18.7}
-  PlayersTankSpawnPoints:
-  - {x: -37.8, y: 0, z: -23.2}
+  levelPrefab: {fileID: 0}
+  tankPrefabs: []
+  tankSpawnPoints: []
+  playersTankSpawnPoints: []

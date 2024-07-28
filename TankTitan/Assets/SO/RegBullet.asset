@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shellPrefab: {fileID: 1679951891777092995, guid: 17b6478d37a5cb24380a93ae1426b8a2, type: 3}
   speed: 15
-  maxBounces: 1
+  maxBounces: 5
   damage: 10
   timeBetweenShots: 0.15
