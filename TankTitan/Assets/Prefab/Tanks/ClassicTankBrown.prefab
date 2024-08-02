@@ -808,7 +808,7 @@ MonoBehaviour:
   player: {fileID: 0}
   bB: {fileID: 4904528898750564658, guid: 17b6478d37a5cb24380a93ae1426b8a2, type: 3}
   bombData: {fileID: 11400000, guid: a5032b378e3d48a458f3c957c3d13be7, type: 2}
-  bombTriggered: 1
+  bombTriggered: 0
   pathUpdateDelay: 0.2
   walkPointRange: 10
   attackSpeed: 2
