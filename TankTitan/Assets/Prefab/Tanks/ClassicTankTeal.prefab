@@ -475,7 +475,7 @@ MonoBehaviour:
   agent: {fileID: 1862191499208479129}
   gameManager: {fileID: 0}
   player: {fileID: 0}
-  bB: {fileID: 4904528898750564658, guid: 17b6478d37a5cb24380a93ae1426b8a2, type: 3}
+  bB: {fileID: 4904528898750564658, guid: c9705f5e95a3c4b4e8cd5a91f1a339d5, type: 3}
   bombData: {fileID: 11400000, guid: a5032b378e3d48a458f3c957c3d13be7, type: 2}
   bombTriggered: 0
   pathUpdateDelay: 0.2
@@ -495,6 +495,7 @@ MonoBehaviour:
     m_Bits: 256
   sightRange: 50
   attackRange: 50
+  startingPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &7981471582061044369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -525,6 +526,30 @@ MonoBehaviour:
       - m_Target: {fileID: 3843573374771477841}
         m_TargetAssemblyTypeName: EnemyTank, Assembly-CSharp
         m_MethodName: ManagerHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 30da4e614a620ab46813d50731e5c7fb, type: 2}
+        m_TargetAssemblyTypeName: Scripts.Data.IntData, Assembly-CSharp
+        m_MethodName: UpdateValue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 037b2e4ab8c56a640864cf2ac52db35c, type: 2}
+        m_TargetAssemblyTypeName: Scripts.UnityActions.GameAction, Assembly-CSharp
+        m_MethodName: Raise
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
