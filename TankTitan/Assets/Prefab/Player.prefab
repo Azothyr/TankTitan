@@ -9808,7 +9808,7 @@ Transform:
   m_GameObject: {fileID: 3136087583771543611}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -39.1, y: 0, z: -19.6}
+  m_LocalPosition: {x: -37.6, y: 0, z: 1.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9903,6 +9903,9 @@ MonoBehaviour:
   bombData: {fileID: 11400000, guid: a5032b378e3d48a458f3c957c3d13be7, type: 2}
   fireTransform: {fileID: 2225499763612572763}
   bombTransform: {fileID: 7439052443563277656}
+  bulletCount: {fileID: 0}
+  bulletPool: []
+  canShoot: 0
 --- !u!1 &3545825181682933097
 GameObject:
   m_ObjectHideFlags: 0

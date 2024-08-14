@@ -813,10 +813,12 @@ MonoBehaviour:
   walkPointRange: 10
   attackSpeed: 2
   rotateSpeed: 10
-  timeBetweenAttacks: 2
+  timeBetweenAttacks: 7
   fireTransform: {fileID: 6741945192489287718}
   bombTransform: {fileID: 1799776414868522128}
   barrelPrefab: {fileID: 7279981528663160518}
+  bulletCount: 2
+  bulletPool: []
   stationary: 1
   groundLayer:
     serializedVersion: 2

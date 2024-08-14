@@ -486,6 +486,8 @@ MonoBehaviour:
   fireTransform: {fileID: 6746391147629352538}
   bombTransform: {fileID: 2657909755161190851}
   barrelPrefab: {fileID: 2665771453102551401}
+  bulletCount: 1
+  bulletPool: []
   stationary: 0
   groundLayer:
     serializedVersion: 2
