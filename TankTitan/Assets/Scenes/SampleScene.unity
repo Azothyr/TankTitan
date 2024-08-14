@@ -1395,6 +1395,18 @@ MonoBehaviour:
           m_StringArgument: On
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2089285136}
+        m_TargetAssemblyTypeName: TankGameManager, Assembly-CSharp
+        m_MethodName: EnemyResume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: On
+          m_BoolArgument: 0
+        m_CallState: 2
   repeatUntilFalseEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4686,9 +4698,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2089285139}
-        m_TargetAssemblyTypeName: InputEvent, Assembly-CSharp
-        m_MethodName: OnDisable
+      - m_Target: {fileID: 2089285136}
+        m_TargetAssemblyTypeName: TankGameManager, Assembly-CSharp
+        m_MethodName: UpdateLevelInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4770,9 +4782,9 @@ MonoBehaviour:
           m_StringArgument: Cleared
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4904528898750564658, guid: 17b6478d37a5cb24380a93ae1426b8a2, type: 3}
-        m_TargetAssemblyTypeName: BulletBehavior, Assembly-CSharp
-        m_MethodName: ResetBullet
+      - m_Target: {fileID: 2089285139}
+        m_TargetAssemblyTypeName: InputEvent, Assembly-CSharp
+        m_MethodName: OnDisable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4829,6 +4841,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2071378333}
         m_TargetAssemblyTypeName: TankController, Assembly-CSharp
         m_MethodName: OnDisable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Next
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2089285136}
+        m_TargetAssemblyTypeName: TankGameManager, Assembly-CSharp
+        m_MethodName: EnemyPause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
