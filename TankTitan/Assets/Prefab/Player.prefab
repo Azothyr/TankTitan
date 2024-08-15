@@ -9807,8 +9807,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3136087583771543611}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -39.1, y: 0, z: -19.6}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -37.6, y: 0, z: 1.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9882,6 +9882,8 @@ MonoBehaviour:
   speed: {fileID: 11400000, guid: e694a9a6aee760f4bb38f3f942f5bead, type: 2}
   turnSpeed: {fileID: 11400000, guid: 80d04a8c69a370144aa1c739ffe915ff, type: 2}
   barrel: {fileID: 3545825181682933097}
+  spawnPoint: {x: -37.6, y: 0, z: 1.7}
+  rb: {fileID: 0}
   moveControl: {fileID: 7766487774202222703, guid: 8c811aabd354f4d25ac2f9ed970bae0f, type: 3}
   turnControl: {fileID: 7766487774202222703, guid: 8c811aabd354f4d25ac2f9ed970bae0f, type: 3}
 --- !u!114 &606503189184525571
