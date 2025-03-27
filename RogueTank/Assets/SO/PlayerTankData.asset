@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b36390d80322b7f4ea02782ca1319add, type: 3}
+  m_Name: PlayerTankData
+  m_EditorClassIdentifier: 
+  playerNumber: 0
+  health: 0
+  moveSpeed: 0
+  fireRate: 0
+  maxActiveBullets: 0
+  bounceCount: 0
+  maxActiveMines: 0
+  tankBody: {fileID: 0}
+  tankTurret: {fileID: 0}
+  turretSpawnPoint: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  bulletSpawnPoint: {fileID: 0}
