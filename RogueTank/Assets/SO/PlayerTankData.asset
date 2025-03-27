@@ -12,15 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b36390d80322b7f4ea02782ca1319add, type: 3}
   m_Name: PlayerTankData
   m_EditorClassIdentifier: 
-  playerNumber: 0
-  health: 0
-  moveSpeed: 0
-  fireRate: 0
-  maxActiveBullets: 0
-  bounceCount: 0
-  maxActiveMines: 0
+  playerNumber: 1
+  health: 1
+  moveSpeed: 15
+  turnSpeed: 100
+  fireRate: 1
+  maxActiveBullets: 3
+  bounceCount: 1
+  maxActiveMines: 1
   tankBody: {fileID: 0}
+  tankWheels: {fileID: 0}
   tankTurret: {fileID: 0}
-  turretSpawnPoint: {fileID: 0}
-  bulletPrefab: {fileID: 0}
-  bulletSpawnPoint: {fileID: 0}
+  tankBarrel: {fileID: 0}
+  bulletPrefab: {fileID: 1679951891777092995, guid: a3fcf6dc0e602264e91055ce77b6fe8f, type: 3}
+  minePrefab: {fileID: 8991306457807591594, guid: 6b823719c766a2b4d918a8f8996a14c7, type: 3}
+  hitEffect: {fileID: 0}
+  moveEffect: {fileID: 148586, guid: 29ea72962b998cd48bfbd94c809dedf9, type: 3}
+  fireEffect: {fileID: 0}

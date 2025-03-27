@@ -191,9 +191,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5080022451524492738}
-  - {fileID: 2270219940948313998}
+  m_Children: []
   m_Father: {fileID: 8654508106086702709}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7826046715348301077
@@ -743,68 +741,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 1.2, z: 0}
   m_TimeToStationary: 0.5
---- !u!1001 &1889836655973192691
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1751034965001325288}
-    m_Modifications:
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 23.65605
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 23.558914
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830236608705122273, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_Name
-      value: ClassicTankTeal (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
---- !u!4 &2270219940948313998 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-  m_PrefabInstance: {fileID: 1889836655973192691}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2296979116458635158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1563,68 +1499,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 1.2, z: 0}
   m_TimeToStationary: 0.5
---- !u!1001 &4883204841092975039
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1751034965001325288}
-    m_Modifications:
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 42.87449
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 15.902794
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5830236608705122273, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-      propertyPath: m_Name
-      value: ClassicTankTeal
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
---- !u!4 &5080022451524492738 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 413061706880701565, guid: 0205c221003643f44aa8527dc2e2571e, type: 3}
-  m_PrefabInstance: {fileID: 4883204841092975039}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5022188684063032141
 PrefabInstance:
   m_ObjectHideFlags: 0
