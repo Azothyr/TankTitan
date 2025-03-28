@@ -12,7 +12,6 @@ namespace GameSpecific.Tank.Data
         public float turnSpeed;
         public float fireRate;
         public int maxActiveBullets;
-        public float bounceCount;
         public int maxActiveMines;
     
         [Header ("Player tank parts")]

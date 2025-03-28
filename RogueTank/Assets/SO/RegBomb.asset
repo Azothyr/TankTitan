@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16517539acb19c947b6193a68b1b3a9f, type: 3}
+  m_Name: RegBomb
+  m_EditorClassIdentifier: 
+  shellPrefab: {fileID: 8991306457807591594, guid: 6b823719c766a2b4d918a8f8996a14c7, type: 3}
+  speed: 0
+  maxBounces: 0
+  damage: 10
+  timeBetweenShots: 0.5

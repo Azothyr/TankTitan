@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &70613246 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 604794986163051568, guid: 1e589ffcc963f77469f07907fb0a812c, type: 3}
+  m_PrefabInstance: {fileID: 695053126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &269098006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -341,8 +346,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Color: {r: 1, g: 0.9568628, b: 0.83921576, a: 1}
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -381,12 +386,12 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 5000
-  m_UseColorTemperature: 1
+  m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -493,6 +498,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9014807626455498028, guid: 1e589ffcc963f77469f07907fb0a812c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 695053129}
+    - targetCorrespondingSourceObject: {fileID: 9014807626455498028, guid: 1e589ffcc963f77469f07907fb0a812c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 695053130}
   m_SourcePrefab: {fileID: 100100000, guid: 1e589ffcc963f77469f07907fb0a812c, type: 3}
 --- !u!1 &695053127 stripped
 GameObject:
@@ -520,6 +528,28 @@ MonoBehaviour:
   barrel: {fileID: 695053128}
   moveControl: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   turnControl: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+--- !u!114 &695053130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695053127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 494def1e4f37ff94eb3ced83892ab1c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireControl: {fileID: 1120369429361536294, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  bombControl: {fileID: 0}
+  fireTransform: {fileID: 1147519899}
+  bombTransform: {fileID: 70613246}
+  playerData: {fileID: 11400000, guid: 2499fa8b684284444bfccead73727968, type: 2}
+  bulletBehavior: {fileID: -5355680902507497713, guid: a3fcf6dc0e602264e91055ce77b6fe8f, type: 3}
+  bulletData: {fileID: 11400000, guid: 9a17fb055c06f494382beb7b9f367b34, type: 2}
+  bombData: {fileID: 11400000, guid: ea69b8eaa12238d4490f85b3fd2c5218, type: 2}
+  bulletPool: []
+  canShoot: 1
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +599,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1147519899 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7431692526633003437, guid: 1e589ffcc963f77469f07907fb0a812c, type: 3}
+  m_PrefabInstance: {fileID: 695053126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
