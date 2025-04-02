@@ -10,5 +10,7 @@ namespace GameSpecific.Tank.Data
         public float maxBounces = 2.0f;
         public float damage = 10.0f;
         public float timeBetweenShots = 0.5f;
+        public float explosionRadius = 5.0f;
+        public float delay = 3.0f;
     }
 }

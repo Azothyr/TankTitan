@@ -17,3 +17,5 @@ MonoBehaviour:
   maxBounces: 0
   damage: 10
   timeBetweenShots: 0.5
+  explosionRadius: 3.5
+  delay: 1

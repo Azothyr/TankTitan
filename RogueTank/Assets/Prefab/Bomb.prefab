@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 5329456026435698904}
   - component: {fileID: 8798975864895805601}
   - component: {fileID: 6654795534740487207}
+  - component: {fileID: 3357847701019975544}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5010636380288430983
 Transform:
   m_ObjectHideFlags: 0
@@ -102,7 +103,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -110,3 +111,19 @@ CapsuleCollider:
   m_Height: 2.3999999
   m_Direction: 1
   m_Center: {x: 0.00000023841858, y: 1.1999999, z: -0.00000011920929}
+--- !u!114 &3357847701019975544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8991306457807591594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c21f91b8cbb6b4987eae839ea84465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombData: {fileID: 11400000, guid: ea69b8eaa12238d4490f85b3fd2c5218, type: 2}
+  destructibleLayer:
+    serializedVersion: 2
+    m_Bits: 2304

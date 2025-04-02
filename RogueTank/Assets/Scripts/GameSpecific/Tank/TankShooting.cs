@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using GameSpecific.Tank.Data;
@@ -14,11 +15,15 @@ namespace GameSpecific.Tank
         [SerializeField] private Transform bombTransform;
         [SerializeField] private PlayerTankData playerData;
         [SerializeField] private BulletBehavior bulletBehavior;
+        [SerializeField] private BombBehavior bombBehavior;
         [SerializeField] private BulletData bulletData;
         [SerializeField] private BulletData bombData;
         [SerializeField] private List<BulletBehavior> bulletPool;
+        [SerializeField] private List<BombBehavior> bombPool;
         public bool canShoot;
-        private float _timer;
+        private float _timer1;
+        private float _timer2;
+        private WaitForSeconds _wfsObj;
         
         private void Awake()
         {
@@ -29,24 +34,32 @@ namespace GameSpecific.Tank
                 bullet.gameObject.SetActive(false);
                 bulletPool.Add(bullet);
             }
+            bombPool = new List<BombBehavior>();
+            for (var i = 0; i < playerData.maxActiveMines; i++)
+            {
+                var bomb = Instantiate(bombBehavior);
+                bomb.gameObject.SetActive(false);
+                bombPool.Add(bomb);
+            }
         }
         
         private void Update()
         {
-            _timer += Time.deltaTime;
+            _timer1 += Time.deltaTime;
+            _timer2 += Time.deltaTime;
             if (!canShoot) return;
-            if (!(_timer >= bulletData.timeBetweenShots)) return;
-            if (!fireControl.action.triggered) return;
-            Fire();
-            _timer = 0f;
-            // if (_timer >= bombData.timeBetweenShots)
-            // {
-            //     if (bombControl.action.triggered)
-            //     {
-            //         Bomb();
-            //         _timer = 0f;
-            //     }
-            // }
+        
+            if (_timer1 >= bulletData.timeBetweenShots && fireControl.action.triggered)
+            {
+                Fire();
+                _timer1 = 0f;
+            }
+        
+            if (_timer2 >= bombData.timeBetweenShots && bombControl.action.triggered)
+            {
+                Bomb();
+                _timer2 = 0f;
+            }
         }
         
         private void Fire()
@@ -70,6 +83,24 @@ namespace GameSpecific.Tank
             return bulletPool.FirstOrDefault(bullet => !bullet.gameObject.activeInHierarchy);
         }
         
+        private BombBehavior GetBomb()
+        {
+            return bombPool.FirstOrDefault(bomb => !bomb.gameObject.activeInHierarchy);
+        }
+
+        private void Bomb()
+        {
+            //_wfsObj = new WaitForSeconds(bombData.timeBetweenShots);
+            bombBehavior.ResetBomb();
+            
+            var bomb = GetBomb();
+            if (bomb == null) return;
+            bomb.transform.position = bombTransform.position;
+            bomb.transform.rotation = bombTransform.rotation;
+            bomb.gameObject.SetActive(true);
+            bomb.StartExplosion();
+        }
+        
         public void ToggleShootOn()
         {
             canShoot = true;
@@ -87,11 +118,6 @@ namespace GameSpecific.Tank
                 bullet.ResetBullet();
             }
         }
-        
-        // private void Bomb()
-        // {
-        //     
-        // }
         
         private void OnEnable()
         {
