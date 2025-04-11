@@ -15,10 +15,9 @@ MonoBehaviour:
   playerNumber: 1
   health: 1
   moveSpeed: 15
-  turnSpeed: 100
+  turnSpeed: 150
   fireRate: 1
   maxActiveBullets: 3
-  bounceCount: 1
   maxActiveMines: 1
   tankBody: {fileID: 0}
   tankWheels: {fileID: 0}

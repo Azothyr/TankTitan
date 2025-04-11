@@ -6,14 +6,15 @@ namespace GameSpecific.Tank
 {
     public class TankController : MonoBehaviour
     {
-        [SerializeField] private PlayerTankData playerTankData;
+        //[SerializeField] private PlayerTankStats playerTank;
+        [SerializeField] private TankData playerTank;
+        [SerializeField] private TankShooting tankShooting;
         private Rigidbody _rb;
         [SerializeField] private GameObject barrel;
         [SerializeField] private InputActionReference moveControl;
         [SerializeField] private InputActionReference turnControl;
-        
-        
-        
+        [SerializeField] private InputActionReference fireControl;
+        [SerializeField] private InputActionReference bombControl;
         
         private Vector2 _movementInput;
         private Vector2 _turnInput;
@@ -38,6 +39,12 @@ namespace GameSpecific.Tank
             moveControl.action.canceled += ctx => _movementInput = Vector2.zero;
             turnControl.action.performed += ctx => _turnInput = ctx.ReadValue<Vector2>();
             turnControl.action.canceled += ctx => _turnInput = Vector2.zero;
+            
+            fireControl.action.Enable();
+            bombControl.action.Enable();
+            
+            fireControl.action.performed += ctx => tankShooting.FirePreformed();
+            bombControl.action.performed += ctx => tankShooting.BombPreformed();
         }
         
         public void OnDisable()
@@ -48,6 +55,9 @@ namespace GameSpecific.Tank
             
             moveControl.action.performed -= ctx => _movementInput = ctx.ReadValue<Vector2>();
             turnControl.action.performed -= ctx => _turnInput = ctx.ReadValue<Vector2>();
+            
+            fireControl.action.Disable();
+            bombControl.action.Disable();
         }
 
         private void Update()
@@ -79,7 +89,7 @@ namespace GameSpecific.Tank
         private void Move()
         {
             if (_movementInput == Vector2.zero) return;
-            var move = _movementInput.y * playerTankData.moveSpeed * Time.deltaTime;
+            var move = _movementInput.y * playerTank.tankData.moveSpeed * Time.deltaTime;
             var movement = transform.forward * move;
             _rb.MovePosition(_rb.position + movement);
         }
@@ -93,7 +103,7 @@ namespace GameSpecific.Tank
             // _rb.MoveRotation(_rb.rotation * turnRotation);
 
             if (_turnInput == Vector2.zero) return;
-            var turn = _turnInput.x * playerTankData.turnSpeed * Time.deltaTime;
+            var turn = _turnInput.x * playerTank.tankData.turnSpeed * Time.deltaTime;
             var turnRotation = Quaternion.Euler(0f, turn, 0f);
             _rb.MoveRotation(_rb.rotation * turnRotation);
         }

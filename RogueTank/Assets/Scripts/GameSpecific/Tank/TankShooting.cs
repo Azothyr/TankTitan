@@ -1,19 +1,15 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using GameSpecific.Tank.Data;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace GameSpecific.Tank
 {
     public class TankShooting : MonoBehaviour
     {
-        [SerializeField] private InputActionReference fireControl;
-        [SerializeField] private InputActionReference bombControl;
-        [SerializeField] private Transform fireTransform;
-        [SerializeField] private Transform bombTransform;
-        [SerializeField] private PlayerTankData playerData;
+        [SerializeField] private TankData tankData;
+        public Transform fireTransform;
+        public Transform bombTransform;
         [SerializeField] private BulletBehavior bulletBehavior;
         [SerializeField] private BombBehavior bombBehavior;
         [SerializeField] private BulletData bulletData;
@@ -28,14 +24,14 @@ namespace GameSpecific.Tank
         private void Awake()
         {
             bulletPool = new List<BulletBehavior>();
-            for (var i = 0; i < playerData.maxActiveBullets; i++)
+            for (var i = 0; i < tankData.tankData.maxActiveBullets; i++)
             {
                 var bullet = Instantiate(bulletBehavior);
                 bullet.gameObject.SetActive(false);
                 bulletPool.Add(bullet);
             }
             bombPool = new List<BombBehavior>();
-            for (var i = 0; i < playerData.maxActiveMines; i++)
+            for (var i = 0; i < tankData.tankData.maxActiveMines; i++)
             {
                 var bomb = Instantiate(bombBehavior);
                 bomb.gameObject.SetActive(false);
@@ -47,19 +43,22 @@ namespace GameSpecific.Tank
         {
             _timer1 += Time.deltaTime;
             _timer2 += Time.deltaTime;
+        }
+
+        public void FirePreformed()
+        {
             if (!canShoot) return;
+            if (!(_timer1 >= bulletData.timeBetweenShots)) return;
+            Fire();
+            _timer1 = 0f;
+        }
         
-            if (_timer1 >= bulletData.timeBetweenShots && fireControl.action.triggered)
-            {
-                Fire();
-                _timer1 = 0f;
-            }
-        
-            if (_timer2 >= bombData.timeBetweenShots && bombControl.action.triggered)
-            {
-                Bomb();
-                _timer2 = 0f;
-            }
+        public void BombPreformed()
+        {
+            if (!canShoot) return;
+            if (!(_timer2 >= bombData.timeBetweenShots)) return;
+            Bomb();
+            _timer2 = 0f;
         }
         
         private void Fire()
@@ -117,18 +116,6 @@ namespace GameSpecific.Tank
             {
                 bullet.ResetBullet();
             }
-        }
-        
-        private void OnEnable()
-        {
-            fireControl.action.Enable();
-            bombControl.action.Enable();
-        }
-        
-        private void OnDisable()
-        {
-            fireControl.action.Disable();
-            bombControl.action.Disable();
         }
     }
 }
