@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace GameSpecific.Tank.Data
 {
@@ -44,6 +45,6 @@ namespace GameSpecific.Tank.Data
     {
         [Header("Enemy stats")]
         public bool isBoss;
-        public bool isStatinary;
+        public bool isStationary;
     }
 }

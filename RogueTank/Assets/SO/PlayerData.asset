@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   tankData:
-    rid: 2482798661776703553
+    rid: 2482798681214943304
   references:
     version: 2
     RefIds:
-    - rid: 2482798661776703553
+    - rid: 2482798681214943304
       type: {class: PlayerTankStats, ns: GameSpecific.Tank.Data, asm: Assembly-CSharp}
       data:
         health: 1

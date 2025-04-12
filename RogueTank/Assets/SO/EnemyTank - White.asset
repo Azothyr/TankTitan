@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: EnemyTank - White
   m_EditorClassIdentifier: 
   tankData:
-    rid: 2482798661776703563
+    rid: 2482798681214943299
   references:
     version: 2
     RefIds:
-    - rid: 2482798661776703563
+    - rid: 2482798681214943299
       type: {class: EnemyTankStats, ns: GameSpecific.Tank.Data, asm: Assembly-CSharp}
       data:
         health: 1
@@ -32,4 +32,4 @@ MonoBehaviour:
         moveEffect: {fileID: 0}
         fireEffect: {fileID: 0}
         isBoss: 0
-        isStatinary: 0
+        isStationary: 0

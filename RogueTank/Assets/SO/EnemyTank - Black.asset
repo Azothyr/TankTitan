@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: EnemyTank - Black
   m_EditorClassIdentifier: 
   tankData:
-    rid: 2482798661776703563
+    rid: 2482798681214943295
   references:
     version: 2
     RefIds:
-    - rid: 2482798661776703563
+    - rid: 2482798681214943295
       type: {class: EnemyTankStats, ns: GameSpecific.Tank.Data, asm: Assembly-CSharp}
       data:
         health: 1
         moveSpeed: 5
         turnSpeed: 10
         fireRate: 2
-        maxActiveBullets: 1
-        maxActiveMines: 0
+        maxActiveBullets: 3
+        maxActiveMines: 2
         bulletPrefab: {fileID: 1679951891777092995, guid: a3fcf6dc0e602264e91055ce77b6fe8f, type: 3}
         minePrefab: {fileID: 0}
         hitEffect: {fileID: 0}
         moveEffect: {fileID: 0}
         fireEffect: {fileID: 0}
         isBoss: 0
-        isStatinary: 0
+        isStationary: 0

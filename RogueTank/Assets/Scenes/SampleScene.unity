@@ -138,10 +138,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 64752201}
   startTankAction: {fileID: 11400000, guid: 1faf129c78d0cfb469f724f930651d36, type: 2}
-  target: {fileID: 0}
+  target: {fileID: 695053136}
   enemyTank: {fileID: 11400000, guid: 0b85e01e64f9f1140b76298f6e9b2997, type: 2}
   tankShooting: {fileID: 64752205}
-  weaponData: {fileID: 11400000, guid: ea69b8eaa12238d4490f85b3fd2c5218, type: 2}
+  barrelPrefab: {fileID: 1478812804}
   stoppingDistance: 1
   walkPointRange: 20
   groundLayer:
@@ -728,6 +728,11 @@ MonoBehaviour:
   bulletPool: []
   bombPool: []
   canShoot: 1
+--- !u!4 &695053136 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2801601983464136108, guid: 1e589ffcc963f77469f07907fb0a812c, type: 3}
+  m_PrefabInstance: {fileID: 695053126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +791,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7431692526633003437, guid: 1e589ffcc963f77469f07907fb0a812c, type: 3}
   m_PrefabInstance: {fileID: 695053126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1478812804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7279981528663160518, guid: 330d0681542d88643ab1a8ba37837c3c, type: 3}
+  m_PrefabInstance: {fileID: 345171720}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1703141937 stripped
 Transform:

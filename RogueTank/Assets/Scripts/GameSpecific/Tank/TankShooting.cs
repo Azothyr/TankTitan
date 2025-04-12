@@ -12,8 +12,8 @@ namespace GameSpecific.Tank
         public Transform bombTransform;
         [SerializeField] private BulletBehavior bulletBehavior;
         [SerializeField] private BombBehavior bombBehavior;
-        [SerializeField] private BulletData bulletData;
-        [SerializeField] private BulletData bombData;
+        public BulletData bulletData;
+        public BulletData bombData;
         [SerializeField] private List<BulletBehavior> bulletPool;
         [SerializeField] private List<BombBehavior> bombPool;
         public bool canShoot;
