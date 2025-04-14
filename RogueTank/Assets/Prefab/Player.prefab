@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7560808321511594770}
   - component: {fileID: 7632584837056275459}
   - component: {fileID: 6463749330133390699}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Tank_Uperbase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 7640677963101698910}
   - component: {fileID: 7078629516379023575}
   - component: {fileID: 6869937048579925479}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Tank_Wheels5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 5418479952458093431}
   - component: {fileID: 925076633980089303}
   - component: {fileID: 5150089284756710872}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Tank_Wheels3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 6646932615741202422}
   - component: {fileID: 8738185680566675917}
   - component: {fileID: 8515372986854315585}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Tank_Wheels2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 3058447208531205256}
   - component: {fileID: 2554780830577487520}
   - component: {fileID: 690703379324743542}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightDustTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5151,7 +5151,7 @@ GameObject:
   - component: {fileID: 122181920932933828}
   - component: {fileID: 6533436021884262804}
   - component: {fileID: 3322066442484737091}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Tank_Wheels4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5235,7 +5235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 545625789327569552}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: ClassicTankBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5271,7 +5271,7 @@ GameObject:
   - component: {fileID: 1255128202625687437}
   - component: {fileID: 6615575992232182243}
   - component: {fileID: 2331457402976246742}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Tank_Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5355,7 +5355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 604794986163051568}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: BombArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5388,7 +5388,7 @@ GameObject:
   - component: {fileID: 1906838332494148648}
   - component: {fileID: 9019809251300552915}
   - component: {fileID: 3767362989406533176}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftDustTrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10180,7 +10180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7431692526633003437}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10213,7 +10213,7 @@ GameObject:
   - component: {fileID: 3081572457373125495}
   - component: {fileID: 3806887583630750364}
   - component: {fileID: 6908472813057423892}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Tank_Wheels1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10297,7 +10297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2342985104106753781}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10336,7 +10336,7 @@ GameObject:
   - component: {fileID: 8936096642626237551}
   - component: {fileID: 4226278036690735783}
   - component: {fileID: 7871351486427170557}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Tank_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10423,7 +10423,7 @@ GameObject:
   - component: {fileID: 5264862688758310588}
   - component: {fileID: 2979392010347512157}
   - component: {fileID: 4242028306598295524}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Tank_Baral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10509,7 +10509,7 @@ GameObject:
   - component: {fileID: 2801601983464136108}
   - component: {fileID: 4028695336488645404}
   - component: {fileID: 7759994364975131813}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}

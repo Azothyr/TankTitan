@@ -1,13 +1,16 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class RogueTanksGameManager : MonoBehaviour
+namespace GameSpecific.Tank
 {
-    [Header("Game Manager")]
-    [SerializeField] private GameAction onStartAction;
-    [SerializeField] private UnityEvent onStart;
-    private void Start()
+    public class RogueTanksGameManager : MonoBehaviour
     {
-        onStartAction.RaiseAction();
+        [Header("Game Manager")]
+        [SerializeField] private GameAction onStartAction;
+        [SerializeField] private UnityEvent onStart;
+        private void Start()
+        {
+            onStartAction.RaiseAction();
+        }
     }
 }

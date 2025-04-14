@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5268957670467640480}
   - component: {fileID: 1891100683952065286}
   - component: {fileID: -5355680902507497713}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,3 +156,4 @@ MonoBehaviour:
   destructibleLayer:
     serializedVersion: 2
     m_Bits: 256
+  bounce: 0
