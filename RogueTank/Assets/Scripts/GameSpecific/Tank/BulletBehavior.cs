@@ -21,16 +21,17 @@ namespace GameSpecific.Tank
         {
             if (bounce >= bulletData.maxBounces)
             {
-                gameObject.SetActive(false);
+                ResetBullet();
             }
             if (collision.gameObject.layer == 6)
             {
                 collision.gameObject.SetActive(false);
+                ResetBullet();
             }
             else if ((destructibleLayer.value & (1 << collision.gameObject.layer)) != 0)
             {
                 collision.gameObject.SetActive(false);
-                gameObject.SetActive(false);
+                ResetBullet();
             }
             else
             {

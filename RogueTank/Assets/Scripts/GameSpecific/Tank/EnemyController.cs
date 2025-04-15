@@ -29,7 +29,7 @@ namespace GameSpecific.Tank
         private bool _alreadyAttacked;
         private bool _bombTriggered;
         private bool _canMove = true;
-        private float _attackTimer;
+        public float _attackTimer;
         private float _bombTimer;
     
     
@@ -79,6 +79,8 @@ namespace GameSpecific.Tank
         {
             while (_canMove)
             {
+              _attackTimer += Time.deltaTime;
+              _bombTimer += Time.deltaTime;  
                 Vector3 position = transform.position;
                 bool playerInSightRange = Physics.CheckSphere(position, sightRange, targetLayer);
                 bool playerInAttackRange = Physics.CheckSphere(position, attackRange, targetLayer);
@@ -112,6 +114,7 @@ namespace GameSpecific.Tank
         {
             while (!_canMove)
             {
+                _attackTimer += Time.deltaTime;
                 if (!CanSeePlayer())
                 {
                     FindPlayer();
@@ -234,17 +237,15 @@ namespace GameSpecific.Tank
     
         private void AttackPlayer()
         {
-            if (!_alreadyAttacked)
-            {
-                Debug.Log("Enemy is attacking the player.");
-                tankShooting.FirePreformed();
-                _alreadyAttacked = true;
-                Invoke(nameof(ResetAttack), tankShooting.bulletData.timeBetweenShots);
-            }
+            Debug.Log("Enemy is attacking the player.");
+            if (_alreadyAttacked) return;
+            _alreadyAttacked = true;
+            tankShooting.FirePreformed();
+            _alreadyAttacked = false;
         }
         private void ResetAttack()
         {
-            _alreadyAttacked = false;
+            
         }
     
         private IEnumerator RotateTimer()
