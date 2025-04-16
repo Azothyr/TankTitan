@@ -24,14 +24,14 @@ namespace GameSpecific.Tank
         private void Awake()
         {
             bulletPool = new List<BulletBehavior>();
-            for (var i = 0; i < tankData.tankData.maxActiveBullets; i++)
+            for (var i = 0; i < tankData.stats.maxActiveBullets; i++)
             {
                 var bullet = Instantiate(bulletBehavior);
                 bullet.gameObject.SetActive(false);
                 bulletPool.Add(bullet);
             }
             bombPool = new List<BombBehavior>();
-            for (var i = 0; i < tankData.tankData.maxActiveMines; i++)
+            for (var i = 0; i < tankData.stats.maxActiveMines; i++)
             {
                 var bomb = Instantiate(bombBehavior);
                 bomb.gameObject.SetActive(false);

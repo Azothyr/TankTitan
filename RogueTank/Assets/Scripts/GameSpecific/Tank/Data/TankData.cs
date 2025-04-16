@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace GameSpecific.Tank.Data
 {
@@ -8,19 +6,20 @@ namespace GameSpecific.Tank.Data
     public class TankData : ScriptableObject
     {
         [SerializeReference, SubclassSelector]
-        public TankStats tankData;
+        public TankStats stats;
     }
     
     [System.Serializable]
     public abstract class TankStats
     {
         [Header("Tank stats")]
-        public float health;
-        public float moveSpeed;
-        public float turnSpeed;
-        public float fireRate;
-        public int maxActiveBullets;
-        public int maxActiveMines;
+        public float health = 1f;
+        public float moveSpeed = 1f;
+        public float turnSpeed = 1f;
+        public float fireRate = 1f;
+        public int maxActiveBullets = 1;
+        public int maxActiveMines = 1;
+        
         [Header("Tank parts")]
         public GameObject bulletPrefab;
         public GameObject minePrefab;

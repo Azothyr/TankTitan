@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc17514afe6068949a1f4aa0c5de402c, type: 3}
   m_Name: EnemyTank - Gray
   m_EditorClassIdentifier: 
-  tankData:
-    rid: 2482798681214943301
+  stats:
+    rid: 7844420993463091279
   references:
     version: 2
     RefIds:
-    - rid: 2482798681214943301
+    - rid: 7844420993463091279
       type: {class: EnemyTankStats, ns: GameSpecific.Tank.Data, asm: Assembly-CSharp}
       data:
         health: 1
