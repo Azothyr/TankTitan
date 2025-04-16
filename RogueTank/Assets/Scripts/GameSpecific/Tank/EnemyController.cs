@@ -5,14 +5,11 @@ using UnityEngine.AI;
 
 namespace GameSpecific.Tank
 {
-    public class EnemyController : MonoBehaviour
+    public class EnemyController : TankController
     {
         [SerializeField] private NavMeshAgent agent;
         [SerializeField] private GameAction startTankAction;
         [SerializeField] private Transform target;
-        [SerializeField] private TankData enemyTank;
-        [SerializeField] private TankShooting tankShooting;
-        [SerializeField] private GameObject barrelPrefab;
         [SerializeField] private float stoppingDistance = 1f;
         [SerializeField] private float walkPointRange;
         [SerializeField] private LayerMask groundLayer, targetLayer;
@@ -37,7 +34,7 @@ namespace GameSpecific.Tank
         {
             agent = GetComponent<NavMeshAgent>();
             target = GameObject.FindWithTag("Player").transform;
-            agent.speed = enemyTank.tankData.moveSpeed;
+            agent.speed = tankData.stats.moveSpeed;
             agent.stoppingDistance = stoppingDistance;
         }
     
@@ -48,19 +45,19 @@ namespace GameSpecific.Tank
 
         private void TankStart(GameAction _)
         {
-            Debug.Log("StartTank");
-            EnemyTankStats enemyTankStats = enemyTank.tankData as EnemyTankStats;
+            // Debug.Log("StartTank");
+            EnemyTankStats enemyTankStats = tankData.stats as EnemyTankStats;
         
             if (enemyTankStats != null && enemyTankStats.isStationary)
             {
-                Debug.Log("isStationary");
+                // Debug.Log("isStationary");
                 agent.isStopped = false;
                 _canMove = false;
                 StartCoroutine(TankStationary());
             }
             else
             {
-                Debug.Log("isMoving");
+                // Debug.Log("isMoving");
                 agent.isStopped = false;
                 _canMove = true;
                 StartCoroutine(TankMovement());
@@ -257,13 +254,13 @@ namespace GameSpecific.Tank
         private void RotateBarrel()
         {
             Vector3 targetPosition = target.position;
-            var position = barrelPrefab.transform.position;
+            var position = barrel.transform.position;
             targetPosition.y = position.y;
             _direction = targetPosition - position;
 
             Quaternion lookRotation = Quaternion.LookRotation(_direction);
             lookRotation *= Quaternion.Euler(0, 90, 0);
-            barrelPrefab.transform.rotation = Quaternion.Slerp(barrelPrefab.transform.rotation, lookRotation, Time.deltaTime * enemyTank.tankData.turnSpeed);
+            barrel.transform.rotation = Quaternion.Slerp(barrel.transform.rotation, lookRotation, Time.deltaTime * tankData.stats.turnSpeed);
         }
 
         private void RandomRotateBarrel()
@@ -281,16 +278,16 @@ namespace GameSpecific.Tank
             _isRotating = true;
             float elapsedTime = 0f;
             float duration = 5f; // Adjust duration as needed for smoother transitions
-            Quaternion startRotation = barrelPrefab.transform.rotation;
+            Quaternion startRotation = barrel.transform.rotation;
 
             while (elapsedTime < duration)
             {
-                barrelPrefab.transform.rotation = Quaternion.Lerp(startRotation, targetRotation, elapsedTime / duration);
+                barrel.transform.rotation = Quaternion.Lerp(startRotation, targetRotation, elapsedTime / duration);
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
 
-            barrelPrefab.transform.rotation = targetRotation;
+            barrel.transform.rotation = targetRotation;
             _isRotating = false;
         }
     
@@ -299,18 +296,26 @@ namespace GameSpecific.Tank
             _direction = target.position - transform.position;
             if (Physics.Raycast(transform.position, _direction, out var hit))
             {
-                Debug.Log($"Raycast hit: {hit.transform.name}");
+                // Debug.Log($"Raycast hit: {hit.transform.name}");
                 if (hit.transform == target)
                 {
-                    Debug.Log("Enemy can see the player.");
+                    // Debug.Log("Enemy can see the player.");
                     return true;
                 }
             }
-            Debug.Log("Enemy cannot see the player.");
+            // Debug.Log("Enemy cannot see the player.");
             return false;
         }
-    
-        public void ResetTank()
+
+        protected override void Move()
+        {
+        }
+
+        protected override void Turn()
+        {
+        }
+
+        protected override void ResetTank()
         {
             //transform.position = startingPosition;
             agent.Warp(startingPosition);
