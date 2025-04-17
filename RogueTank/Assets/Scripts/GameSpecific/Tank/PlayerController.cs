@@ -34,38 +34,43 @@ namespace GameSpecific.Tank
             }
         }
         
-        private void Start()
-        {
-            // ResetTank();
-        }
+        private System.Action<InputAction.CallbackContext> _onFirePerformed;
+        private System.Action<InputAction.CallbackContext> _onBombPerformed;
         
         public void OnEnable()
         {
             _rb.linearVelocity = Vector3.zero;
+            
             moveControl.action.Enable();
-            turnControl.action.Enable();
-
             moveControl.action.performed += HandleMoveInput;
+            
+            turnControl.action.Enable();
             turnControl.action.performed += HandleTurnInput;
             
+            _onFirePerformed = _ => tankShooting.FirePreformed();
             fireControl.action.Enable();
-            bombControl.action.Enable();
+            fireControl.action.performed += _onFirePerformed;
             
-            fireControl.action.performed += ctx => tankShooting.FirePreformed();
-            bombControl.action.performed += ctx => tankShooting.BombPreformed();
+            _onBombPerformed = _ => tankShooting.BombPreformed();
+            bombControl.action.Enable();
+            bombControl.action.performed += _onBombPerformed;
         }
         
         public void OnDisable()
         {
             _rb.linearVelocity = Vector3.zero;
-            moveControl.action.Disable();
-            turnControl.action.Disable();
             
+            moveControl.action.Disable();
             moveControl.action.performed -= HandleMoveInput;
+            
+            turnControl.action.Disable();
             turnControl.action.performed -= HandleTurnInput;
             
             fireControl.action.Disable();
+            fireControl.action.performed -= _onFirePerformed;
+            
             bombControl.action.Disable();
+            bombControl.action.performed -= _onBombPerformed;
         }
 
         private void Update()
@@ -88,6 +93,26 @@ namespace GameSpecific.Tank
             }
         }
 
+        private bool _wallCollision;
+        private void OnCollisionEnter(Collision collision)
+        {
+            switch (collision.gameObject.layer)
+            {
+                case 10:
+                    _wallCollision = true;
+                    break;
+            }
+        }
+        private void OnCollisionExit(Collision collision)
+        {
+            switch (collision.gameObject.layer)
+            {
+                case 10:
+                    _wallCollision = false;
+                    break;
+            }
+        }
+
         private bool _isMoving;
         private void HandleMoveInput(InputAction.CallbackContext context)
         {
@@ -99,7 +124,8 @@ namespace GameSpecific.Tank
         
         private void MoveAction(InputAction.CallbackContext context)
         {
-            _moveTarget = transform.forward * context.ReadValue<Vector2>().y * tankData.stats.moveSpeed * Time.deltaTime;
+            var unbiasedMove = _wallCollision ? -transform.forward * 5 : transform.forward;
+            _moveTarget = unbiasedMove * context.ReadValue<Vector2>().y * tankData.stats.moveSpeed * Time.deltaTime;
             Move();
         }
 

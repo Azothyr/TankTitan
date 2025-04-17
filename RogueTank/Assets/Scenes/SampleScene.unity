@@ -136,12 +136,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e90a526a292e224489f7513c2cb887d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tankData: {fileID: 11400000, guid: 4d24b81b8d818ba44b9a40c2531517f3, type: 2}
+  tankShooting: {fileID: 64752205}
+  barrel: {fileID: 2077465688}
   agent: {fileID: 64752201}
   startTankAction: {fileID: 11400000, guid: 1faf129c78d0cfb469f724f930651d36, type: 2}
   target: {fileID: 695053136}
-  enemyTank: {fileID: 11400000, guid: 0b85e01e64f9f1140b76298f6e9b2997, type: 2}
-  tankShooting: {fileID: 64752205}
-  barrelPrefab: {fileID: 1478812804}
   stoppingDistance: 1
   walkPointRange: 20
   groundLayer:
@@ -172,14 +172,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 494def1e4f37ff94eb3ced83892ab1c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tankData: {fileID: 11400000, guid: b059cc056f2c85c42ae8eb455f4351da, type: 2}
-  fireTransform: {fileID: 1854778096}
-  bombTransform: {fileID: 1123009076}
+  tankData: {fileID: 11400000, guid: 0b85e01e64f9f1140b76298f6e9b2997, type: 2}
   bulletBehavior: {fileID: -5355680902507497713, guid: a3fcf6dc0e602264e91055ce77b6fe8f, type: 3}
-  bombBehavior: {fileID: 3357847701019975544, guid: 6b823719c766a2b4d918a8f8996a14c7, type: 3}
   bulletData: {fileID: 11400000, guid: 9a17fb055c06f494382beb7b9f367b34, type: 2}
+  fireTransform: {fileID: 1854778096}
+  bombBehavior: {fileID: 3357847701019975544, guid: 6b823719c766a2b4d918a8f8996a14c7, type: 3}
   bombData: {fileID: 11400000, guid: ea69b8eaa12238d4490f85b3fd2c5218, type: 2}
-  bulletPool: []
+  bombTransform: {fileID: 1123009076}
   bombPool: []
   canShoot: 1
 --- !u!4 &70613246 stripped
@@ -195,6 +194,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 249907666312035747, guid: 4aeee929acdcbce4c8c3cfdd768e4b43, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 264319293932166262, guid: 4aeee929acdcbce4c8c3cfdd768e4b43, type: 3}
       propertyPath: m_Name
       value: LevelArea
@@ -483,6 +486,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7226978680875959476, guid: 330d0681542d88643ab1a8ba37837c3c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7279981528663160518, guid: 330d0681542d88643ab1a8ba37837c3c, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -711,6 +718,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4028695336488645404, guid: 1e589ffcc963f77469f07907fb0a812c, type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 4028695336488645404, guid: 1e589ffcc963f77469f07907fb0a812c, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9014807626455498028, guid: 1e589ffcc963f77469f07907fb0a812c, type: 3}
       propertyPath: m_Name
       value: Player
@@ -752,7 +767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0dda67a1f7e1141ba2c6b68afe51a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTank: {fileID: 11400000, guid: 2c29c04e5fd234a4ca93df6f38a382d6, type: 2}
+  tankData: {fileID: 11400000, guid: 2c29c04e5fd234a4ca93df6f38a382d6, type: 2}
   tankShooting: {fileID: 695053130}
   barrel: {fileID: 695053128}
   moveControl: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
@@ -772,13 +787,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tankData: {fileID: 11400000, guid: 2c29c04e5fd234a4ca93df6f38a382d6, type: 2}
-  fireTransform: {fileID: 1147519899}
-  bombTransform: {fileID: 70613246}
   bulletBehavior: {fileID: -5355680902507497713, guid: a3fcf6dc0e602264e91055ce77b6fe8f, type: 3}
-  bombBehavior: {fileID: 3357847701019975544, guid: 6b823719c766a2b4d918a8f8996a14c7, type: 3}
   bulletData: {fileID: 11400000, guid: 9a17fb055c06f494382beb7b9f367b34, type: 2}
+  fireTransform: {fileID: 1147519899}
+  bombBehavior: {fileID: 3357847701019975544, guid: 6b823719c766a2b4d918a8f8996a14c7, type: 3}
   bombData: {fileID: 11400000, guid: ea69b8eaa12238d4490f85b3fd2c5218, type: 2}
-  bulletPool: []
+  bombTransform: {fileID: 70613246}
   bombPool: []
   canShoot: 1
 --- !u!4 &695053136 stripped
@@ -845,11 +859,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7431692526633003437, guid: 1e589ffcc963f77469f07907fb0a812c, type: 3}
   m_PrefabInstance: {fileID: 695053126}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1478812804 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7279981528663160518, guid: 330d0681542d88643ab1a8ba37837c3c, type: 3}
-  m_PrefabInstance: {fileID: 345171720}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1587239690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -905,6 +914,14 @@ PrefabInstance:
     - target: {fileID: 7672271174216547127, guid: 249c74f64c57058409ca1be133a261e1, type: 3}
       propertyPath: m_Name
       value: Block_Big
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672271174216547127, guid: 249c74f64c57058409ca1be133a261e1, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513905902757311475, guid: 249c74f64c57058409ca1be133a261e1, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1031,6 +1048,11 @@ Transform:
 --- !u!4 &1854778096 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6741945192489287718, guid: 330d0681542d88643ab1a8ba37837c3c, type: 3}
+  m_PrefabInstance: {fileID: 345171720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2077465688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7279981528663160518, guid: 330d0681542d88643ab1a8ba37837c3c, type: 3}
   m_PrefabInstance: {fileID: 345171720}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
