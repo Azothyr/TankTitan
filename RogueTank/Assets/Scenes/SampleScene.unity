@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tankData: {fileID: 11400000, guid: 4d24b81b8d818ba44b9a40c2531517f3, type: 2}
   tankShooting: {fileID: 64752205}
-  barrel: {fileID: 345171721}
+  barrel: {fileID: 2077465688}
   agent: {fileID: 64752201}
   startTankAction: {fileID: 11400000, guid: 1faf129c78d0cfb469f724f930651d36, type: 2}
   target: {fileID: 695053136}
@@ -488,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7226978680875959476, guid: 330d0681542d88643ab1a8ba37837c3c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7279981528663160518, guid: 330d0681542d88643ab1a8ba37837c3c, type: 3}
       propertyPath: m_Layer
@@ -549,11 +549,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 64752205}
   m_SourcePrefab: {fileID: 100100000, guid: 330d0681542d88643ab1a8ba37837c3c, type: 3}
---- !u!1 &345171721 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7172121266902644919, guid: 330d0681542d88643ab1a8ba37837c3c, type: 3}
-  m_PrefabInstance: {fileID: 345171720}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,6 +1048,11 @@ Transform:
 --- !u!4 &1854778096 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6741945192489287718, guid: 330d0681542d88643ab1a8ba37837c3c, type: 3}
+  m_PrefabInstance: {fileID: 345171720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2077465688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7279981528663160518, guid: 330d0681542d88643ab1a8ba37837c3c, type: 3}
   m_PrefabInstance: {fileID: 345171720}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
