@@ -88,6 +88,30 @@ namespace GameSpecific.Tank
             }
         }
 
+        private bool _wallCollision;
+        private void OnCollisionEnter(Collision collision)
+        {
+            switch (collision.gameObject.layer)
+            {
+                case 10:
+                    _wallCollision = true;
+                    break;
+                default:
+                    break;
+            }
+        }
+        private void OnCollisionExit(Collision collision)
+        {
+            switch (collision.gameObject.layer)
+            {
+                case 10:
+                    _wallCollision = false;
+                    break;
+                default:
+                    break;
+            }
+        }
+
         private bool _isMoving;
         private void HandleMoveInput(InputAction.CallbackContext context)
         {
@@ -99,7 +123,8 @@ namespace GameSpecific.Tank
         
         private void MoveAction(InputAction.CallbackContext context)
         {
-            _moveTarget = transform.forward * context.ReadValue<Vector2>().y * tankData.stats.moveSpeed * Time.deltaTime;
+            var unbiasedMove = _wallCollision ? -transform.forward * 5 : transform.forward;
+            _moveTarget = unbiasedMove * context.ReadValue<Vector2>().y * tankData.stats.moveSpeed * Time.deltaTime;
             Move();
         }
 
