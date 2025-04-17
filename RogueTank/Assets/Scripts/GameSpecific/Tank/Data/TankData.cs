@@ -17,8 +17,8 @@ namespace GameSpecific.Tank.Data
         public float moveSpeed = 1f;
         public float turnSpeed = 1f;
         public float fireRate = 1f;
-        public int maxActiveBullets = 1;
-        public int maxActiveMines = 1;
+        public uint maxActiveBullets = 1;
+        public uint maxActiveMines = 1;
         
         [Header("Tank parts")]
         public GameObject bulletPrefab;
@@ -32,7 +32,7 @@ namespace GameSpecific.Tank.Data
     public class PlayerTankStats : TankStats
     {
         [Header("Player stats")]
-        public int playerNumber;
+        public uint playerNumber;
         public GameObject tankBody;
         public GameObject tankWheels;
         public GameObject tankTurret;

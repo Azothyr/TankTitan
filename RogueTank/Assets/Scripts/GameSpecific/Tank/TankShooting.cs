@@ -8,28 +8,29 @@ namespace GameSpecific.Tank
     public class TankShooting : MonoBehaviour
     {
         [SerializeField] private TankData tankData;
-        public Transform fireTransform;
-        public Transform bombTransform;
+
         [SerializeField] private BulletBehavior bulletBehavior;
-        [SerializeField] private BombBehavior bombBehavior;
         public BulletData bulletData;
+        public Transform fireTransform;
+        private ZP_Tools.ObjectPool<BulletBehavior> bulletPool;
+        
+        [SerializeField] private BombBehavior bombBehavior;
         public BulletData bombData;
-        [SerializeField] private List<BulletBehavior> bulletPool;
+        public Transform bombTransform;
         [SerializeField] private List<BombBehavior> bombPool;
+        
         public bool canShoot;
+        private uint _activeBullets;
+        
         private float _timer1;
         private float _timer2;
         private WaitForSeconds _wfsObj;
         
         private void Awake()
         {
-            bulletPool = new List<BulletBehavior>();
-            for (var i = 0; i < tankData.stats.maxActiveBullets; i++)
-            {
-                var bullet = Instantiate(bulletBehavior);
-                bullet.gameObject.SetActive(false);
-                bulletPool.Add(bullet);
-            }
+            _activeBullets = 0;
+            bulletPool = ZP_Tools.PoolManager.Instance.GetPool(bulletBehavior, tankData.stats.maxActiveBullets);
+            
             bombPool = new List<BombBehavior>();
             for (var i = 0; i < tankData.stats.maxActiveMines; i++)
             {
@@ -47,8 +48,8 @@ namespace GameSpecific.Tank
 
         public void FirePreformed()
         {
-            if (!canShoot) return;
-            if (!(_timer1 >= bulletData.timeBetweenShots)) return;
+            if (!canShoot || !(_timer1 >= bulletData.timeBetweenShots)) return;
+            
             Fire();
             _timer1 = 0f;
         }
@@ -63,24 +64,33 @@ namespace GameSpecific.Tank
         
         private void Fire()
         {
+            if (_activeBullets >= tankData.stats.maxActiveBullets) return;
+            _activeBullets++;
+            
             bulletBehavior.ResetBullet();
             var direction = fireTransform.forward;
-            var eulerAngles = fireTransform.eulerAngles;
-            var newRotation = Quaternion.Euler(0, eulerAngles.y + 180, 0);
+            var rotation = Quaternion.Euler(0, fireTransform.eulerAngles.y + 180, 0);
         
             var bullet = GetBullet();
-            if (bullet == null) return;
+            if (bullet == null)
+            {
+                Debug.LogError("Bullet not found.", this);
+                return;
+            }
             bullet.transform.position = fireTransform.position;
-            bullet.transform.rotation = newRotation;
+            bullet.transform.rotation = rotation;
             bullet.gameObject.SetActive(true);
-            bullet.Shoot(direction.normalized);
+            
+            bullet.Shoot(direction.normalized, () => 
+            { 
+                bulletPool.ReturnToPool(bullet);
+                _activeBullets--; 
+            });
+            
             bullet.bounce = 0;
         }
         
-        private BulletBehavior GetBullet()
-        {
-            return bulletPool.FirstOrDefault(bullet => !bullet.gameObject.activeInHierarchy);
-        }
+        private BulletBehavior GetBullet() => bulletPool.Get();
         
         private BombBehavior GetBomb()
         {
@@ -98,24 +108,6 @@ namespace GameSpecific.Tank
             bomb.transform.rotation = bombTransform.rotation;
             bomb.gameObject.SetActive(true);
             bomb.StartExplosion();
-        }
-        
-        public void ToggleShootOn()
-        {
-            canShoot = true;
-        }
-        
-        public void ToggleShootOff()
-        {
-            canShoot = false;
-        }
-        
-        public void ResetBullets()
-        {
-            foreach (var bullet in bulletPool)
-            {
-                bullet.ResetBullet();
-            }
         }
     }
 }
